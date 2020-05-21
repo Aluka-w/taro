@@ -36,17 +36,21 @@ class App extends Component {
       backgroundColor: "#eeeeee"
     },
     tabBar: {
-      color: "#000",
-      selectedColor: "#5F9EA0",
-      backgroundColor: "FF7F50",
+      color: "#cdcdcd",
+      selectedColor: "#000",
+      backgroundColor: "ffffff",
       borderStyle: "black",
       list: [
         {
           pagePath: "pages/index/index",
+          iconPath: "./static/image/dan.png",
+          selectedIconPath: "./static/image/select-dan.png",
           text: "首页"
         },
         {
           pagePath: "pages/user/index",
+          iconPath: "./static/image/user.png",
+          selectedIconPath: "./static/image/select-user.png",
           text: "用户中心"
         }
       ]
