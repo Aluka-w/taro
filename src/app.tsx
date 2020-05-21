@@ -24,16 +24,18 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: [
-      "pages/index/index",
-      "pages/user/index",
-    ],
+    pages: ["pages/index/index", "pages/user/index"],
     window: {
       backgroundTextStyle: "light",
       navigationBarBackgroundColor: "#fff",
       navigationBarTextStyle: "black",
       navigationBarTitleText: "微信接口功能演示",
       backgroundColor: "#eeeeee"
+    },
+    networkTimeout: {
+      request: 60000,
+      downloadFile: 60000,
+      uploadFile: 60000
     },
     tabBar: {
       color: "#cdcdcd",
@@ -54,7 +56,15 @@ class App extends Component {
           text: "用户中心"
         }
       ]
+    },
+    requiredBackgroundModes: ["audio"],
+    resizable: false,
+    permission: {
+      "scope.userLocation": {
+        desc: "你的位置信息将用于小程序位置接口的效果展示"
+      }
     }
+    // debug: true
   };
 
   componentDidMount() {}
