@@ -1,7 +1,7 @@
 import Taro, { Component, Config } from "@tarojs/taro";
 import { Provider } from "@tarojs/redux";
 
-import Index from "./pages/index";
+import Index from "./pages/classic/index";
 
 import configStore from "./store";
 
@@ -24,7 +24,11 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
   config: Config = {
-    pages: ["pages/index/index", "pages/user/index"],
+    pages: [
+      "pages/classic/index", 
+      "pages/book/index",
+      "pages/like/index"
+    ],
     window: {
       backgroundTextStyle: "light",
       navigationBarBackgroundColor: "#fff",
@@ -44,16 +48,22 @@ class App extends Component {
       borderStyle: "black",
       list: [
         {
-          pagePath: "pages/index/index",
-          iconPath: "./static/image/dan.png",
-          selectedIconPath: "./static/image/select-dan.png",
-          text: "首页"
+          pagePath: "pages/classic/index",
+          iconPath: "./pages/assets/image/icon/classic.png",
+          selectedIconPath: "./pages/assets/image/icon/classic@highlight.png",
+          text: "流行"
         },
         {
-          pagePath: "pages/user/index",
-          iconPath: "./static/image/user.png",
-          selectedIconPath: "./static/image/select-user.png",
-          text: "用户中心"
+          pagePath: "pages/book/index",
+          iconPath: "./pages/assets/image/icon/book.png",
+          selectedIconPath: "./pages/assets/image/icon/book@highlight.png",
+          text: "书单"
+        },
+        {
+          pagePath: "pages/like/index",
+          iconPath: "./pages/assets/image/icon/like.png",
+          selectedIconPath: "./pages/assets/image/icon/like@highlight.png",
+          text: "喜欢"
         }
       ]
     },

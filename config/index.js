@@ -1,3 +1,4 @@
+const path = require('path')
 const config = {
   projectName: 'taro',
   date: '2020-5-21',
@@ -66,7 +67,7 @@ const config = {
   },
   h5: {
     publicPath: '/',
-    staticDirectory: 'static',
+    staticDirectory: 'pages/assets',
     postcss: {
       autoprefixer: {
         enable: true,
@@ -86,6 +87,16 @@ const config = {
         }
       }
     }
+  },
+  alias: {
+    '@/components': path.resolve(__dirname, '..', 'src/pages/components'),
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    '@/pages': path.resolve(__dirname, '..', 'src/pages'),
+    '@/assets': path.resolve(__dirname, '..', 'src/pages/assets'),
+    '@/constants': path.resolve(__dirname, '..', 'src/constants'),
+    '@/actions': path.resolve(__dirname, '..', 'src/actions'),
+    '@/reducers': path.resolve(__dirname, '..', 'src/reducers'),
+    '@/store': path.resolve(__dirname, '..', 'src/store'),
   }
 }
 

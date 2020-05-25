@@ -35,7 +35,7 @@ type PageState = {}
 
 type IProps = PageStateProps & PageDispatchProps & PageOwnProps
 
-interface User {
+interface Index {
   props: IProps;
 }
 
@@ -52,7 +52,7 @@ interface User {
     dispatch(asyncAdd())
   }
 }))
-class User extends Component {
+class Index extends Component {
 
     /**
    * 指定config的类型声明为: Taro.Config
@@ -95,4 +95,4 @@ class User extends Component {
 //
 // #endregion
 
-export default User as ComponentClass<PageOwnProps, PageState>
+export default Index as ComponentClass<PageOwnProps, PageState>

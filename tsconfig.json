@@ -21,7 +21,17 @@
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "paths": {
+      "@/components/*": ["./src/pages/components/*"],
+      "@/utils/*": ["./src/utils/*"],
+      "@/pages/*": ["./src/pages/*"],
+      "@/assets/*": ["./src/pages/assets/*"],
+      "@/constants/*": ["./src/constants/*"],
+      "@/actions/*": ["./src/actions/*"],
+      "@/reducers/*": ["./src/reducers/*"],
+      "@/store/*": ["./src/store/*"],
+    }
   },
   "exclude": [
     "node_modules",
